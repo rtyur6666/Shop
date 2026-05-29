@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 確保字體與背景嚴格符合要求 */
+        body { background-color: #ffffff; color: #000000; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="border-b border-black sticky top-0 bg-white z-50">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold tracking-wider">
+                商城
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <a href="#member-site-url" class="border border-black px-4 py-1.5 text-sm font-medium hover:bg-black hover:text-white transition-colors">
+                    會員註冊 / 登入
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-6 flex flex-col md:flex-row gap-6">
+        
+        <aside class="w-full md:w-64 flex-shrink-0">
+            <div class="border border-black p-4">
+                <label for="category-select" class="block text-sm font-bold mb-2">商品分類導覽</label>
+                <select id="category-select" onchange="switchCategory(this.value)" class="w-full bg-white border border-black p-2 text-black focus:outline-none">
+                    <option value="all">全部商品</option>
+                    <option value="tenga">飛機杯</option>
+                    <option value="underwear">原味內褲</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="flex-1">
+            <h2 id="category-title" class="text-xl font-bold mb-6 border-b border-black pb-2">全部商品</h2>
+
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="product-item tenga border border-black p-4 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square w-full bg-gray-100 border border-black mb-4 overflow-hidden flex items-center justify-center">
+                            <img src="圖1.jpg" alt="飛機杯商品" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">精選推薦飛機杯 A 款</h3>
+                        <p class="text-sm mb-4 text-gray-600">商品簡介與規格描述區塊</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-3">$ 990</div>
+                        <a href="" target="_blank" class="block text-center border border-black bg-black text-white py-2 font-bold hover:bg-white hover:text-black transition-colors">
+                            前往賣貨便下單
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-item tenga border border-black p-4 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square w-full bg-gray-100 border border-black mb-4 overflow-hidden flex items-center justify-center">
+                            <img src="圖1.jpg" alt="飛機杯商品" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">精選推薦飛機杯 B 款</h3>
+                        <p class="text-sm mb-4 text-gray-600">商品簡介與規格描述區塊</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-3">$ 1,200</div>
+                        <a href="" target="_blank" class="block text-center border border-black bg-black text-white py-2 font-bold hover:bg-white hover:text-black transition-colors">
+                            前往賣貨便下單
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-item tenga border border-black p-4 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square w-full bg-gray-100 border border-black mb-4 overflow-hidden flex items-center justify-center">
+                            <img src="圖1.jpg" alt="飛機杯商品" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">精選推薦飛機杯 C 款</h3>
+                        <p class="text-sm mb-4 text-gray-600">商品簡介與規格描述區塊</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-3">$ 850</div>
+                        <a href="" target="_blank" class="block text-center border border-black bg-black text-white py-2 font-bold hover:bg-white hover:text-black transition-colors">
+                            前往賣貨便下單
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-item underwear border border-black p-4 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square w-full bg-gray-100 border border-black mb-4 overflow-hidden flex items-center justify-center">
+                            <img src="圖2.jpg" alt="原味內褲商品" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">熱銷原味內褲 A 款</h3>
+                        <p class="text-sm mb-4 text-gray-600">商品簡介與規格描述區塊</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-3">$ 1,500</div>
+                        <a href="" target="_blank" class="block text-center border border-black bg-black text-white py-2 font-bold hover:bg-white hover:text-black transition-colors">
+                            前往賣貨便下單
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-item underwear border border-black p-4 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square w-full bg-gray-100 border border-black mb-4 overflow-hidden flex items-center justify-center">
+                            <img src="圖2.jpg" alt="原味內褲商品" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">熱銷原味內褲 B 款</h3>
+                        <p class="text-sm mb-4 text-gray-600">商品簡介與規格描述區塊</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-3">$ 1,800</div>
+                        <a href="" target="_blank" class="block text-center border border-black bg-black text-white py-2 font-bold hover:bg-white hover:text-black transition-colors">
+                            前往賣貨便下單
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-item underwear border border-black p-4 flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square w-full bg-gray-100 border border-black mb-4 overflow-hidden flex items-center justify-center">
+                            <img src="圖2.jpg" alt="原味內褲商品" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">熱銷原味內褲 C 款</h3>
+                        <p class="text-sm mb-4 text-gray-600">商品簡介與規格描述區塊</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-3">$ 2,200</div>
+                        <a href="" target="_blank" class="block text-center border border-black bg-black text-white py-2 font-bold hover:bg-white hover:text-black transition-colors">
+                            前往賣貨便下單
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-black py-4 mt-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs">
+            &copy; 2026 版權所有
+        </div>
+    </footer>
+
+    <script>
+        function switchCategory(category) {
+            const items = document.querySelectorAll('.product-item');
+            const title = document.getElementById('category-title');
+            
+            // 更新標題文字
+            if (category === 'all') title.innerText = '全部商品';
+            if (category === 'tenga') title.innerText = '飛機杯';
+            if (category === 'underwear') title.innerText = '原味內褲';
+
+            // 控制商品顯示/隱藏
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'flex';
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
